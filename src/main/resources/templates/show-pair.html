@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees Who Worked Together For The Longest Period</title>
+</head>
+<body>
+<h1>Employees Who Worked Together For The Longest Period</h1>
+
+<ul>
+    <li><strong>Employee ID</strong>: <span data-th-text="${employeePair.employeeId1}"></span> </li>
+    <li><strong>Employee ID</strong>: <span data-th-text="${employeePair.employeeId2}"></span> </li>
+    <li><strong>Days Worked Together</strong>: <span data-th-text="${employeePair.daysWorkedTogether}"></span> </li>
+    <br><br>
+    <li th:each="project, stat : ${employeePair.projectDays}">
+        <strong>Project ID</strong>: <span data-th-text="${project.key}"></span>
+        <strong>Days Worked Together On Project</strong> : <span data-th-text="${project.value}"></span>
+    </li>
+</ul>
+
+<form method="get" action="/">
+    <button type="submit">Go to homepage</button><br>
+</form>
+
+</body>
+</html>

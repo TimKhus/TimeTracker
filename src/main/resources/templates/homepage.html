@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Work Together Time Tracker</title>
+</head>
+<body>
+<h1>Work Together Time Tracker</h1>
+
+<h2>Upload CSV File</h2>
+
+<!-- Add this block to display messages -->
+<div th:if="${message}" class="message">
+    <p th:text="${message}"></p>
+</div>
+
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".csv" required>
+    <button type="submit">Upload File</button><br>
+</form>
+<br><br>
+<form method="post" action="/show-pair">
+    <button type="submit">Show employee pair who worked together for the longest period</button><br>
+</form>
+
+<div class="error" th:if="${error}">
+    <p th:utext="${error}"></p>
+</div>
+
+</body>
+</html>
