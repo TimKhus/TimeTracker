@@ -9,15 +9,13 @@ The application accepts a CSV file with data in the following format:
 EmpID, ProjectID, DateFrom, DateTo
 
 ### Sample Input Data (partial):
-143, 12, 2013-11-01, 2014-01-05 
-218, 10, 2012-05-16, NULL 
-143, 10, 2009-01-01, 2011-04-27
+143, 12, 2013-11-01, 2014-01-05<br>218, 10, 2012-05-16, NULL<br>143, 10, 2009-01-01, 2011-04-27
 
 ## Output Data
 The application outputs:
-143, 218, 8 
-10, 5 
-12, 3
+143, 218, 8<br>
+10, 5<br>
+12, 3<br>
 
 ## Specific Requirements
 
